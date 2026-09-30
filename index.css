@@ -428,7 +428,7 @@ main,
 }
 
 .km {
-  font: 600 1.4rem 'Fraunces', serif;
+  font: 600 1.4rem 'Fraunces',serif;
   color: var(--maroon);
 }
 
@@ -612,23 +612,64 @@ main,
 
 /* ---------- Mobile: single-column story ---------- */
 @media (max-width: 760px) {
+
+  /* ── General chapters ── */
   .chapter {
-    padding: 3.5rem 1.1rem;
+    padding: 3rem 1.1rem;
   }
 
-  .split,
-  .editorial,
-  .wall {
+  .chapter h2 {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+
+  /* ── Chapter 1: split → stack ── */
+  .split {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
   }
 
-  .editorial .sq,
-  .wall figure {
+  .split .portrait {
     width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    aspect-ratio: 3 / 4;
   }
 
+  /* ── Distance bar ── */
+  .distance {
+    flex-wrap: wrap;
+    gap: .4rem;
+  }
+
+  .km {
+    font-size: 1.1rem;
+  }
+
+  /* ── Flow pills ── */
+  .flow {
+    gap: .4rem;
+  }
+
+  /* ── Chapter 2: editorial → stack ── */
+  .editorial {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .editorial .portrait,
+  .editorial .sq {
+    width: 100%;
+    transform: none;
+  }
+
+  .editorial .portrait {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* ── Chapter 3: trad-grid → stack ── */
   .trad-grid {
     padding-bottom: 0;
     display: flex;
@@ -644,6 +685,56 @@ main,
     transform: none;
   }
 
+  /* ── Chapter 4: Instagram card ── */
+  .insta {
+    max-width: 100%;
+    padding: 1.1rem;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  /* ── Chapter 5: editor / code block ── */
+  .editor {
+    max-width: 100%;
+    font-size: .8rem;
+  }
+
+  .editor pre {
+    font-size: .78rem;
+    padding: .8rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ── Chapter 6: score counters ── */
+  .score {
+    flex-direction: column;
+    gap: .8rem;
+    font-size: 1.1rem;
+  }
+
+  /* ── Memory wall: collage → stack ── */
+  .wall {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .wall figure {
+    width: 100%;
+    transform: none !important;
+    margin-top: 0 !important;
+  }
+
+  .w1,
+  .w2 { aspect-ratio: 4 / 3; }
+  .w3  { aspect-ratio: 16 / 9; }
+  .w4  { aspect-ratio: 3 / 4; }
+
+  /* ── Timeline: horizontal → vertical ── */
   .timeline {
     flex-direction: column;
     gap: 1.2rem;
@@ -667,16 +758,46 @@ main,
     left: 0;
     top: 2px;
     margin-left: 0;
+    width: 18px;
+    height: 18px;
   }
 
+  /* ── Final ── */
+  .quote {
+    font-size: 1.25rem;
+  }
+
+  .final {
+    max-width: 100%;
+  }
+
+  /* ── Buttons ── */
   .btn {
     width: 100%;
     padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* ── Lightbox ── */
+  .lightbox img {
+    max-width: 96vw;
+    max-height: 70vh;
   }
 
   .lightbox button {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  #lbPrev { left: .4rem; }
+  #lbNext { right: .4rem; }
+  #lbClose { top: .6rem; right: .6rem; }
+
+  /* ── Modal card ── */
+  .modal-card {
+    max-width: 92vw;
+    padding: 1.4rem;
   }
 }
 
