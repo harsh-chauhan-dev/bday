@@ -2,74 +2,184 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshay Sharma Survived Another Year 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday! 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css">
-
 </head>
 <body>
+<canvas id="particles" aria-hidden="true"></canvas>
+<canvas id="confetti" aria-hidden="true"></canvas>
 
-<div id="confetti-container"></div>
-
-<header>
-  <div class="eyebrow">⚠️ Official Roast &amp; Toast Certificate</div>
-  <h1>Happy Birthday, <span>Akshay!</span> 🎂</h1>
-  <p class="subtitle">21 years old and still can't figure out how to reply to messages on time. Truly an icon. 🙄✨</p>
-
-  <p>We haven't talked in almost 1.5 years, but birthdays are a good excuse to remind someone they still matter. Happy Birthday, bro. Hope life has been treating you well</p>
+<!-- HERO -->
+<header class="hero" id="hero">
+  <h1>Hey Birthday Girl! 🎂</h1>
+  <p class="sub">Someone turned a birthday wish into a little website.</p>
+  <p class="small">Because sending just "Happy Birthday" felt too boring. 😂</p>
+  <button class="btn" id="openBtn">Open Your Birthday Surprise ✨</button>
 </header>
 
-<div class="photo-wrap">
-  <div class="photo-placeholder">
- <img src="./assets//Image_friend.jpeg" alt="A descriptive text about the image" class="fit-image">
+<main id="story" class="hidden">
 
-  </div>
-</div>
-<p class="caption">(The most unflattering pic )</p>
+  <!--
+    PHOTO SLOTS: each .photo is blank until you add the matching file
+    to the /images/ folder (photo1.jpg, photo2.jpg ...). Nothing else to edit.
+  -->
 
-<main>
-
-  <div class="card">
-    <span class="tag">Fun Fact</span>
-    <h2>The Legend Was Born 🐣</h2>
-    <p>14 July 2005: Humanity made its biggest deployment mistake. A baby was born. Doctors called him healthy. Twenty years later, we're still waiting for the patch update. Happy Birthday, bro. 😂</p>
-  
-  </div>
-
-  <div class="card">
-    <span class="tag">Certified Facts</span>
-    <h2>Reasons We Still Keep Akshay Around 🤔</h2>
-    <ul class="roast-list">
-     <li>💀 Says "She's not my type" while acting like her unpaid security guard</li>
-<li>🚩 Biggest red flag since Internet Explorer</li>
-<li>📡 Broadcasts everyone's secrets, then says "Bro, don't tell anyone."</li>
-<li>🎪 Walking contradiction with premium features</li>
-<li>🤖 Runs on 2% battery and 200% delusion</li>
-<li>💍 Declares "She's mine" without ever reading the terms and conditions</li>
-      <li>❤️ Somehow still the friend everyone actually wants around (You tolled me evrything )</li>
-    </ul>
-  </div>
-
-  
-  <div class="counter-section">
-    <h2>🎈 Countdown to Cake o'clock 🎈</h2>
-    <div class="counter">
-      <span id="countdownMain">Loading...</span>
-      <span id="countdownText"></span>
+  <!-- CHAPTER 1 -->
+  <section class="chapter split">
+    <figure class="photo portrait reveal" data-speed="0.05">
+      <img src="assets/image-1.jpeg" alt="Photo of my friend" onerror="this.remove()">
+      <span class="ph"></span>
+      <figcaption>Where it started 📸</figcaption>
+    </figure>
+    <div class="text reveal">
+      <p class="tag">Chapter 01</p>
+      <h2>A Completely Random Meeting</h2>
+      <p>We met completely randomly on Instagram.</p>
+      <p>No plan.<br>No introduction.<br>Nothing special.</p>
+      <p>Just one random interaction that eventually turned into conversations.</p>
+      <ol class="flow">
+        <li>Instagram</li><li>First conversation</li><li>More conversations</li><li>Friendship 🤝</li>
+      </ol>
+      <p>The funny thing? We live almost 1000 km apart.</p>
+      <div class="distance" aria-label="About 1000 kilometres apart">
+        <span class="dot"></span><span class="line"></span><span class="km">~1000 KM</span><span class="line"></span><span class="dot"></span>
+      </div>
+      <p>Yet somehow, distance didn't stop a random Instagram connection from becoming a friendship.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="btn-row">
-    <button onclick="roast()">🎯 Roast Him Again</button>
-    <button class="secondary" onclick="dropConfetti(40)">🎉 More Confetti</button>
-  </div>
-  <p id="roastOutput"></p>
+  <!-- CHAPTER 2 -->
+  <section class="chapter editorial">
+    <div class="text reveal">
+      <p class="tag">Chapter 02</p>
+      <h2>The Friend</h2>
+      <p>Some people just make the internet feel a little smaller.</p>
+    </div>
+    <figure class="photo portrait reveal"><img src="assets/image-1.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>Just another day 📸</figcaption></figure>
+    <figure class="photo sq reveal"><img src="assets/image-2.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>Casual mode.</figcaption></figure>
+    <figure class="photo sq reveal"><img src="assets/image-3.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>That smile.</figcaption></figure>
+  </section>
 
+  <!-- CHAPTER 3 -->
+  <section class="chapter trad">
+    <div class="text reveal">
+      <p class="tag">Chapter 03</p>
+      <h2>Traditional Mode: ON ✨</h2>
+      <p>Apparently, one birthday website wasn't enough.</p>
+      <p>So here is a small appreciation of the traditional look. 😄</p>
+    </div>
+    <div class="trad-grid">
+      <figure class="photo big reveal" data-speed="0.04"><img src="assets/image-9.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>Traditional mode ✨</figcaption></figure>
+      <figure class="photo over o1 reveal"><img src="assets/image-4.jpeg" alt="" onerror="this.remove()"><span class="ph"></span></figure>
+      <figure class="photo over o2 reveal"><img src="assets/image-5.jpeg" alt="" onerror="this.remove()"><span class="ph"></span></figure>
+    </div>
+  </section>
+
+  <!-- CHAPTER 4 -->
+  <section class="chapter center">
+    <p class="tag reveal">Chapter 04</p>
+    <h2 class="reveal">Her Little Bio</h2>
+    <article class="insta reveal">
+      <div class="insta-top">
+        <div class="avatar photo-slot"><img src="assets/image-2.jpeg" alt="" onerror="this.remove()"></div>
+        <div class="stats"><b>Posts</b><b>Followers</b><b>Following</b></div>
+      </div>
+      <p class="bio">Rai saheb 😎
+Bhumihar 💛
+Mahadev 💖
+It is not necessary that everybody gets everything 😊#@</p>
+    </article>
+  </section>
+
+  <!-- CHAPTER 5 -->
+  <section class="chapter center">
+    <p class="tag reveal">Chapter 05</p>
+    <h2 class="reveal">Birthday.exe</h2>
+    <div class="editor reveal">
+      <div class="bar"><i></i><i></i><i></i><span>birthday.js</span></div>
+<pre><code>function celebrateBirthday(friend) {
+    friend.happiness = Infinity;
+    friend.success++;
+    friend.smiles = "∞";
+
+    return "Happy Birthday 🎂";
+}</code></pre>
+      <pre id="terminal" class="terminal" aria-live="polite"></pre>
+    </div>
+    <button class="btn" id="runBtn">▶ Run Birthday.exe</button>
+  </section>
+
+  <!-- CHAPTER 6 -->
+  <section class="chapter center">
+    <p class="tag reveal">Chapter 06</p>
+    <h2 class="reveal">Plot Twist 😂</h2>
+    <p class="reveal">We started as two completely random people on Instagram.<br>Now I'm literally writing HTML, CSS and JavaScript for your birthday.</p>
+    <div class="score reveal">
+      <div>Internet: <b class="count" data-to="1">0</b></div>
+      <div>Random friendship: <b class="count" data-to="1">0</b></div>
+    </div>
+  </section>
+
+  <!-- MEMORY WALL -->
+  <section class="chapter">
+    <h2 class="center-title reveal">Memory Wall</h2>
+    <div class="wall">
+      <figure class="photo w1 reveal"><img src="assets/image-6.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>One frame 📸</figcaption></figure>
+      <figure class="photo w2 reveal"><img src="assets/image-7.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>Birthday archive.</figcaption></figure>
+      <figure class="photo w3 reveal"><img src="assets/image-8.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>Another one.</figcaption></figure>
+      <figure class="photo w4 reveal"><img src="assets/image-9.jpeg" alt="" onerror="this.remove()"><span class="ph"></span><figcaption>✨</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="chapter center">
+    <h2 class="reveal">Friendship Timeline</h2>
+    <ol class="timeline">
+      <li class="reveal">Random Instagram</li>
+      <li class="reveal">First chat</li>
+      <li class="reveal">More conversations</li>
+      <li class="reveal">Online friendship</li>
+      <li class="reveal">1000 km apart</li>
+      <li class="reveal">Birthday website 🎂</li>
+    </ol>
+  </section>
+
+  <!-- FINAL -->
+  <section class="chapter center final">
+    <p class="tag reveal">Chapter Final</p>
+    <p class="quote reveal">From a random Instagram meeting<br>to a friendship across 1000 km...</p>
+    <p class="quote reveal pause">That's actually a pretty nice story.</p>
+    <h2 class="reveal">Happy Birthday! 🎂💛</h2>
+    <p class="reveal">I hope this year brings you happiness,<br>good health, success, peaceful days,<br>good memories and lots of reasons to smile.</p>
+    <p class="reveal">Keep learning.<br>Keep growing.<br>Keep being yourself.</p>
+    <p class="reveal"><b>Have an amazing birthday! 🥳</b></p>
+    <p class="sign reveal">— Harsh<br><small>Your friend from ~1000 km away.</small></p>
+    <button class="btn" id="surpriseBtn">One More Surprise 🎁</button>
+  </section>
 </main>
 
-<footer>
-  Made with love, sarcasm, and zero chill — for Akshay Sharma's 21st. 🥳
-</footer>
+<!-- Surprise modal -->
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-card">
+    <h3 id="mTitle">Okay, that's it.</h3>
+    <p>No more surprises.</p>
+    <p>...probably. 😂</p>
+    <button class="btn" id="modalClose">Close</button>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="lbClose" aria-label="Close">✕</button>
+  <button id="lbPrev" aria-label="Previous photo">‹</button>
+  <img id="lbImg" alt="">
+  <button id="lbNext" aria-label="Next photo">›</button>
+  <p id="lbCap"></p>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
